@@ -1,0 +1,40 @@
+Q&A:
+====
+1. REPL, input 3. and use Tab, show functions.
+A: some functions list, but need check more in Int, Double, RichInt, RichDouble
+
+2. get 3's squre root and then squar it, then get the difference between 3 and the final result
+A:>scala.math.sqrt(3)
+  res0: Double = 1.732....
+  >res0*res0
+  res1: Double = 2.99996
+  >3-res1
+  res2: Double = 4....E-16
+  
+3. res is val or var
+A:try >res1 = 0
+      error: reassignment to val
+  so res is val
+
+4. try String * Int
+A:>"crazy" * 3
+  res: String crazycrazycrazy
+  You can find this method in StringOps
+
+5. What does 10 max 2 mean? Where to find the defination
+A:return the bigger Int, find it in Scala.Int
+
+6. use bigInt to calculate 2 pow 1024
+A: BigInt(2).pow(1024) // same with BigInt(2) pow 1024
+
+7: To just use probablePrime and Random directely, what to do?
+A: Import scala.BigInt(for probablePrime), scala.util(for Random)
+
+8: Generate a random BigInt, and then output a 36 radix String
+A: BigInt(scala.util.Random.nextInt).toString(36)
+
+9: How to get the first char and the last char?
+A: "hello"(0) "hello".take(1) “hello”.reverse(0) "hello".takeRight(1) "hello".drop(1) "hello".dropRight(1)
+
+10. What's the difference between take, drop, takeRight, dropRight with substring?
+A: First group of functions are do with left first char, but substring can get from middle
